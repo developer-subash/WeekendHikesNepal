@@ -1,0 +1,210 @@
+<div class="register-form-wrapper">
+    <form class="register-form" [formGroup]="destinationForm" (ngSubmit)="destinationCreateAction()">
+        <div class="container">
+            <h1>Destination Create Page</h1>
+
+            <hr>
+            <div class="form-group">
+                <label for="title"><b>Destination Name</b></label>
+                <input type="text"
+                    [ngClass]="{'validation-error' : fb['title'].touched && fb['title'].getError('required')}"
+                    formControlName="title" placeholder="Enter Destination Name" name="title" required>
+                <div *ngIf="fb['title'].touched && fb['title'].getError('required')" class="form-error-messages"
+                    id="error-no-username">
+                    {{emptyTitle}}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="startingPoint"><b>Starting Point</b></label>
+                <input type="text"
+                    [ngClass]="{'validation-error' : fb['startingPoint'].touched && fb['startingPoint'].getError('required')}"
+                    formControlName="startingPoint" placeholder="Enter Starting Point" name="startingPoint" required>
+                <div *ngIf="fb['startingPoint'].touched && fb['startingPoint'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyStartingPointTitle}}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="endPoint"><b>End Point</b></label>
+                <input type="text"
+                    [ngClass]="{'validation-error' : fb['endPoint'].touched && fb['endPoint'].getError('required')}"
+                    formControlName="endPoint" placeholder="Enter End Point" name="endPoint" required>
+                <div *ngIf="fb['endPoint'].touched && fb['endPoint'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyEndPointTitle}}</div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="duration"><b>Duration</b></label>
+                <input type="text"
+                    [ngClass]="{'validation-error' : fb['duration'].touched && fb['duration'].getError('required')}"
+                    formControlName="duration" placeholder="Enter Duration" name="duration" required>
+                <div *ngIf="fb['duration'].touched && fb['duration'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyDurationTitle}}</div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="length"><b>Destination Length( in KM)</b></label>
+                <input type="text"
+                    [ngClass]="{'validation-error' : fb['length'].touched && fb['length'].getError('required')}"
+                    formControlName="length" placeholder="Enter Length For Destination" name="length" required>
+                <div *ngIf="fb['length'].touched && fb['length'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyLengthTitle}}</div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="maximumAltitude"><b>Maximum Altitude (in Meters)</b></label>
+                <input type="text"
+                    [ngClass]="{'validation-error' : fb['maximumAltitude'].touched && fb['maximumAltitude'].getError('required')}"
+                    formControlName="maximumAltitude" placeholder="Enter Maximum Altitude" name="maximumAltitude"
+                    required>
+                <div *ngIf="fb['maximumAltitude'].touched && fb['maximumAltitude'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyMaximumAltitudeTitle}}</div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="grade"><b>Grade </b></label>
+                <input type="text"
+                    [ngClass]="{'validation-error' : fb['grade'].touched && fb['grade'].getError('required')}"
+                    formControlName="grade" placeholder="Enter Grade" name="grade" required>
+                <div *ngIf="fb['grade'].touched && fb['grade'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyGradeTitle}}</div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="highlightDestination"><b>Highlight Destination </b></label>
+                <input type="text"
+                    [ngClass]="{'validation-error' : fb['highlightDestination'].touched && fb['highlightDestination'].getError('required')}"
+                    formControlName="highlightDestination" placeholder="Enter Highlight Destination"
+                    name="highlightDestination" required>
+                <div *ngIf="fb['highlightDestination'].touched && fb['highlightDestination'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyHighlightDestinationTitle}}</div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="briefOverview"><b>Brief Overview </b></label>
+                <input type="text"
+                    [ngClass]="{'validation-error' : fb['briefOverview'].touched && fb['briefOverview'].getError('required')}"
+                    formControlName="briefOverview" placeholder="Enter Brief Overview" name="briefOverview" required>
+                <div *ngIf="fb['briefOverview'].touched && fb['briefOverview'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyBriefOverviewTitle}}</div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="trailBreakDown"><b>Trail BreakDown </b></label>
+                <input type="text"
+                    [ngClass]="{'validation-error' : fb['trailBreakDown'].touched && fb['trailBreakDown'].getError('required')}"
+                    formControlName="trailBreakDown" placeholder="Enter Brief Overview" name="trailBreakDown" required>
+                <div *ngIf="fb['trailBreakDown'].touched && fb['trailBreakDown'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyTrailBreakDownTitle}}</div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="difficulties"><b>Difficulties </b></label>
+                <input type="text"
+                    [ngClass]="{'validation-error' : fb['difficulties'].touched && fb['difficulties'].getError('required')}"
+                    formControlName="difficulties" placeholder="Enter Difficulties" name="difficulties" required>
+                <div *ngIf="fb['difficulties'].touched && fb['difficulties'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyDifficultiesTitle}}</div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="packThings"><b>Pack Things </b></label>
+                <input type="text"
+                    [ngClass]="{'validation-error' : fb['packThings'].touched && fb['packThings'].getError('required')}"
+                    formControlName="packThings" placeholder="Enter Pack Things" name="packThings" required>
+                <div *ngIf="fb['packThings'].touched && fb['packThings'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyPackThingsTitle}}</div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="hotelAccomodation"><b>Hotel Accomodation </b></label>
+                <input type="text"
+                    [ngClass]="{'validation-error' : fb['hotelAccomodation'].touched && fb['hotelAccomodation'].getError('required')}"
+                    formControlName="hotelAccomodation" placeholder="Enter Hotel Accomodation" name="hotelAccomodation"
+                    required>
+                <div *ngIf="fb['hotelAccomodation'].touched && fb['hotelAccomodation'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyHotelAccomadationTitle}}</div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="transportation"><b>Transportation </b></label>
+                <input type="text"
+                    [ngClass]="{'validation-error' : fb['transportation'].touched && fb['transportation'].getError('required')}"
+                    formControlName="transportation" placeholder="Enter Transportation" name="transportation" required>
+                <div *ngIf="fb['transportation'].touched && fb['transportation'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyTransportationTitle}}</div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="pointToRemember"><b>Point To Remember </b></label>
+                <input type="text"
+                    [ngClass]="{'validation-error' : fb['pointToRemember'].touched && fb['pointToRemember'].getError('required')}"
+                    formControlName="pointToRemember" placeholder="Enter Point To Remember" name="pointToRemember"
+                    required>
+                <div *ngIf="fb['pointToRemember'].touched && fb['pointToRemember'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyPointToRememberTitle}}</div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="reviews"><b>Reviews </b></label>
+                <input type="text"
+                    [ngClass]="{'validation-error' : fb['reviews'].touched && fb['reviews'].getError('required')}"
+                    formControlName="reviews" placeholder="Enter Reviews" name="reviews" required>
+                <div *ngIf="fb['reviews'].touched && fb['reviews'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyReviewsTitle}}</div>
+            </div>
+            <!-- need to fetch tags from api and use them as select and select2 plugin initialized -->
+            <div class="form-group">
+                <!-- <label for="email"><b>Select Tags</b></label> -->
+                <legend>test</legend>
+                <tag-input  [hideForm]="false" [clearOnBlur]="true" [editable]="true" formControlName="tags" [onlyFromAutocomplete]="false" name="something">
+                    <tag-input-dropdown [identifyBy]="'_id'" [focusFirstElement]="true"  [displayBy]="'title'" [showDropdownIfEmpty]="false"
+                        [autocompleteItems]="destinationTags">
+                    </tag-input-dropdown>
+                </tag-input>
+
+            </div>
+
+            <div class="form-group file-upload">
+
+                <label for="bannerImg"><b>Banner Img </b></label>
+                <input type="file" accept="image/*" id="file-ip-1" class="img-upload" name="tags" (change)="onFileChange($event)" required>
+            </div>
+            <img [src]="imageSrc" *ngIf="imageSrc" style="height: 250px; width:300px">
+            <hr>
+
+            <div class="form-group">
+                <button type="submit" class="registerbtn" [disabled]="destinationForm.invalid">Create</button>
+            </div>
+        </div>
+
+
+    </form>
+</div>

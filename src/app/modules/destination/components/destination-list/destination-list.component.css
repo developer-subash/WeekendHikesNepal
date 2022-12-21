@@ -1,0 +1,52 @@
+.destination-list {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.destination-list td,
+.destination-list th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.destination-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.destination-list tr:hover {
+  background-color: #ddd;
+}
+
+.destination-list th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+.destination-list-container-wrapper {
+  width: 95vw;
+  margin-top: 55px;
+}
+.tbl-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+.add-destination-btn {
+  background-color: #04aa6d;
+  width: 20%;
+  height: 50px;
+  text-align: center;
+  clear: both;
+  margin-top: 10px;
+  font-weight: 600;
+  margin: 10px;
+  cursor: pointer;
+  color: #fff;
+}
+a {
+    text-decoration: none;
+}

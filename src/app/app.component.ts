@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'whn';
+  selectedCars = [3];
+    cars = [
+        { id: 1, name: 'Volvo' },
+        { id: 2, name: 'Saab', disabled: true },
+        { id: 3, name: 'Opel' },
+        { id: 4, name: 'Audi' },
+    ];
 }

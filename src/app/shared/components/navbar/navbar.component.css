@@ -1,0 +1,19 @@
+.navbar-wrapper {
+  width: 95vw;
+  height: 10vh;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  min-height: 100%;
+  padding: 20px;
+  background-color: #dbb277;
+}
+a {
+  text-decoration: none;
+  color: #4414b0;
+  font-size: 20px;
+  font-weight: 600;
+}

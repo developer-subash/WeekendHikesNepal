@@ -1,0 +1,29 @@
+<div class="destination-list-container-wrapper">
+    <h2> Destination List Page </h2>
+    <hr>
+    <div class="tbl-wrapper">
+        <a class="add-destination-btn">Create</a>
+        <table class="destination-list">
+            <tr>
+                <th>S.N.</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Starting Point</th>
+                <th>End Point</th>
+                <th>Action</th>
+            </tr>
+            
+            <tr *ngFor="let destination of destinations; let index=index">
+                <td>{{index+1}}</td>
+                <td>{{destination.title}}</td>
+                
+                <td>Img</td>
+                <td>{{destination.startingPoint}}</td>
+                <td>{{destination.endPoint}}</td>
+                <td>
+                    <a [routerLink]="['/destination/create']" [queryParams]="{destinationId: destination._id}"><i class="fa-light fa-pen-to-square"></i>edit</a>
+                    <a href=""><i class="fa fa-fw fa-trash"></i></a>
+                </td>
+        </table>
+    </div>
+</div>

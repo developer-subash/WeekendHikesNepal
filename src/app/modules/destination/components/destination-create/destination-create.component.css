@@ -1,0 +1,102 @@
+.register-form-wrapper {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+  margin-top: 50px;
+}
+
+.register-form {
+  width: 70vw;
+  height: 70%;
+  margin: 0 auto;
+  background-color: rgb(195, 198, 199);
+  padding: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.form-group > input {
+  padding: 15px;
+  border: none;
+  outline: none;
+  background: #f1f1f1;
+}
+.form-group > label {
+  margin-bottom: 5px;
+}
+
+.form-group > input:hover {
+  border: none;
+  /* background-color: red; */
+}
+.form-group > button {
+  height: 50px;
+  text-transform: uppercase;
+  background-color: #57b846;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+hr {
+  border: 2px solid #f1f1f1;
+  margin-bottom: 30px;
+}
+
+.form-group select {
+  padding: 15px;
+  border: none;
+  outline: none;
+  background-color: #f1f1f1;
+}
+.form-group select option {
+  padding: 5px;
+  margin-top: 5px;
+}
+input.ng2-tag-input__text-input {
+    width: 98% !important;
+}
+
+.ng-tns-c64-0 {
+    width: 100%;
+}
+.ng2-tag-input {
+
+}
+.ng2-tags-container {
+
+}
+
+.validation-error {
+  border: 3px solid #ff0000 !important;
+}
+.form-error-messages {
+  color: #ff0000;
+  padding: 3px;
+}
+.img-upload {
+  background:#fff;
+  box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.377),
+              3px 3px 7px rgba(94, 104, 121, 0.377);
+}
+
+.file-upload label {
+  /* display:block;
+  width:45%;
+  height:45px;
+  margin-left: 25%;
+  line-height:50px;
+  text-align:center;
+  background:#1172c2;
+  color:#fff;
+  font-size:15px;
+  font-family:"Open Sans",sans-serif;
+  text-transform:Uppercase;
+  font-weight:600;
+  border-radius:5px;
+  cursor:pointer; */
+}

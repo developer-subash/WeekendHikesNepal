@@ -1,0 +1,31 @@
+<div class="container-login">
+    <div class="wrap-login">
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="loginAction()">
+            <span class="login-form-title">
+                Welcome
+            </span>
+            <div class="wrap-input">
+                <input type="email" class="input " formControlName="email" name="email">
+                <span class="focus-input" data-placeholder="email"></span>
+
+                <div *ngIf="fb['email'].touched && fb['email'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyEmail}}
+                </div>
+            </div>
+
+            <div class="wrap-input">
+                <input type="password" class="input" name="password" formControlName="password">
+                <span class="focus-input" data-placeholder="password"></span>
+                <div *ngIf="fb['password'].touched && fb['password'].getError('required')"
+                    class="form-error-messages" id="error-no-username">
+                    {{emptyPassword}}
+                </div>
+            </div>
+
+            <div class="container-login-form-btn">
+                <button type="submit" class="login-form-btn" [disabled]="loginForm.invalid">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
