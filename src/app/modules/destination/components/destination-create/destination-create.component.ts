@@ -18,6 +18,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./destination-create.component.css'],
 })
 export class DestinationCreateComponent implements OnInit {
+  public tagList: Array<string> = ['Tag One', 'Tag Two', 'Tag Three'];
   items = [
     {
       productId: 446,

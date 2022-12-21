@@ -10,6 +10,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { DesinationService } from './services/desination.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TagInputModule } from 'ngx-chips';
+import { NgSelectModule } from '@ng-select/ng-select';
 @NgModule({
   declarations: [
     DestinationComponent,
@@ -24,6 +25,7 @@ import { TagInputModule } from 'ngx-chips';
     FormsModule,
     ReactiveFormsModule,
     TagInputModule,
+    NgSelectModule
   ],
   providers: [DesinationService],
 })
